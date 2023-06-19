@@ -1,3 +1,0 @@
-Matriz unidimenssional - vetor normal
-
-matriz bidimenssional - vetor dentro de vetores
