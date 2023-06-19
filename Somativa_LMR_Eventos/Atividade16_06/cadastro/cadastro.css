@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+   
+}
+body{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* ========começo do header =============*/
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap");
+
+header{
+  margin-top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  box-shadow: 0px 5px 20px rgb(119, 116, 116);
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  width: 30%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+}
+
+main {
+  background: url("bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 92vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+  width: 100%;
+  height: 25%;
+  transition: .4s;
+  
+}
+
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .nav-list li:hover{
+    background-color: rebeccapurple;
+    transition: .7s;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+/* ==========fim do header ==========*/
+
+/*=====Main=====*/
+.main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.formss{
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-forms{
+    
+    font-weight: bold;
+    background-color: aliceblue;
+    border-radius:10px;
+    box-shadow: 0px 10px 20px rgb(177, 175, 175);
+    width: 50%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 90%;
+}
+.cabecalho{
+    background-color: rgb(20, 18, 155);
+    padding: 20px;
+    color: aliceblue;
+}
+.form{
+    padding: 20px;
+}
+.fa-solid{
+  width: 80%;
+  height: 75px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+     width: 100%;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-control input{
+    border: 2px solid gray;
+    display: block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px;
+}
+.form-control i{
+ position: absolute;
+ top: 53px;
+ right: 25px;
+ visibility: hidden;
+}
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+}
+.form button{
+    background-color: rgb(13, 129, 32);
+    color: white;
+    font-size:14px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+.form button:hover{
+    background-color: rgb(48, 179, 70);
+    transition: .5s;  
+}
+/*====================*/
+
+
+
